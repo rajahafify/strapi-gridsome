@@ -4,4 +4,4 @@ services:
     region: singapore
     env: static
     buildCommand: gridsome build
-    staticPublishPath: build
+    staticPublishPath: dist

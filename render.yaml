@@ -2,6 +2,5 @@ services:
   - type: web
     name: gridsome
     region: singapore
-    env: static
     buildCommand: gridsome build
     staticPublishPath: dist

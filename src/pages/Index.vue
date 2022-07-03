@@ -21,7 +21,7 @@ export default {
   },
   async mounted () {
     console.log('hello')
-    const { data } = await axios.get('https://strapi-ugwh.onrender.com/api/members')
+    const { data } = await axios.get(process.env.GRIDSOME_API_URL + '/api/members')
     this.members = data.data
     console.log(this.members)
   }

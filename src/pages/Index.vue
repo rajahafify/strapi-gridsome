@@ -2,6 +2,7 @@
   <Layout>
     <div v-for="member in members" :key="member.id">
       <h2>Name: {{ member.attributes.name }}</h2>
+      <p>Ic Number: {{ member.attributes.icNumber }}</p>
       <p>Email: {{ member.attributes.email }}</p>
       <p>Phone Number: {{ member.attributes.phoneNumber }}</p>
     </div>
@@ -20,10 +21,8 @@ export default {
     }
   },
   async mounted () {
-    console.log('hello')
     const { data } = await axios.get(process.env.GRIDSOME_API_URL + '/api/members')
     this.members = data.data
-    console.log(this.members)
   }
 }
 
